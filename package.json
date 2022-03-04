@@ -2,7 +2,7 @@
   "name": "rest-countries-api-with-color-theme-switcher-master",
   "version": "1.0.0",
   "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
-  "main": "svgxuse.js",
+  "default": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
