@@ -5,6 +5,28 @@
   margin: 0 auto;
 }
 
+.spinner {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 5rem auto;
+  text-align: center;
+  svg {
+    height: 6rem;
+    width: 6rem;
+    fill: hsl(0, 0%, 100%);
+    animation: rotate 2s infinite linear;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .search {
   display: flex;
   justify-content: space-between;

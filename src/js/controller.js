@@ -5,6 +5,7 @@ import * as module from "./module";
 import contryView from "./View/contryView";
 import regionView from "./View/regionView";
 import detailsView from "./View/detailsView";
+import View from "./View/view";
 
 if (module.hot) {
   module.hot.accept();
@@ -38,6 +39,7 @@ const controlSearchRegion = async function (data) {
 
 const init = async function () {
   await module.renderCountry();
+  regionView.render(module.state.country);
   searchCountry.addinputHandler(controlSearchCountry);
   regionView.addSelectHandler(controlSearchRegion);
 };

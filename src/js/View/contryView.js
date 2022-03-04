@@ -11,6 +11,7 @@ class SearhCountry extends View {
       handle(query);
     });
   }
+
   _genrerateMarkup() {
     return `
       <div class="country">

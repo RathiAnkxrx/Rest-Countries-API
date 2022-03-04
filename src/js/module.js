@@ -8,7 +8,6 @@ export const state = {
 export const renderCountry = async function () {
   const res = await fetch("https://restcountries.com/v3.1/all");
   const data = await res.json();
-  console.log(data[0]);
   state.country = data.map((data) => {
     return {
       name: data.name.common,
