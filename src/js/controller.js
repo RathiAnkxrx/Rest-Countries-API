@@ -5,13 +5,13 @@ import * as module from "./module";
 import contryView from "./View/contryView";
 import regionView from "./View/regionView";
 import detailsView from "./View/detailsView";
-import View from "./View/view";
-
-if (module.hot) {
-  module.hot.accept();
-}
 
 const regionIcon = document.querySelector(".icon--down");
+const themeIcom = document.querySelector(".theme__section");
+
+themeIcom.addEventListener("click", (e) => {
+  document.body.classList.toggle("light-theme");
+});
 
 regionIcon.addEventListener("click", function (e) {
   const regionList = e.target.nextElementSibling;
