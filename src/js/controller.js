@@ -43,28 +43,3 @@ const init = async function () {
 };
 
 init();
-
-let a = Math.round(prompt("").trim());
-let b = Math.round(prompt("").trim());
-const arr1 = [],
-  arr2 = [],
-  arr3 = [];
-
-for (let i = 2; i < a; ) {
-  if (a % i === 0) {
-    arr1.push(i);
-  }
-  i++;
-}
-for (let i = 2; i < b; ) {
-  if (b % i === 0) {
-    arr2.push(i);
-  }
-  i++;
-}
-for (var i = 0; i < arr1.length; i++) {
-  for (var j = 0; j < arr2.length; j++) {
-    if (arr1[i] === arr2[j]) arr3.push(arr1[i]);
-  }
-}
-console.log(arr3.length + 1);
