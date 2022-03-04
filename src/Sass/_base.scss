@@ -1,0 +1,49 @@
+// color variables
+// - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+// - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+// - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+// - Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+// - Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+// - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --primary-color: hsl(209, 23%, 22%);
+  --primary-color-background: hsl(207, 26%, 17%);
+  --primary-color-shadow: hsl(200, 15%, 8%);
+  --primary-color-text: hsl(0, 0%, 100%);
+  --primary-color-input: hsl(0, 0%, 52%);
+
+  // font family
+  --primary-font: "Nunito Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--primary-color-text);
+}
+
+body.light-theme {
+  --primary-color: hsl(0, 0%, 100%);
+  --primary-color-background: hsl(0, 0%, 98%);
+  --primary-color-text: hsl(200, 15%, 8%);
+  --primary-color-shadow: hsl(0, 0%, 80%);
+  --primary-color-input: hsl(0, 0%, 52%);
+}

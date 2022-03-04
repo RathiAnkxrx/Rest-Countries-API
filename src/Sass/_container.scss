@@ -1,0 +1,196 @@
+.container {
+  background-color: var(--primary-color-background);
+  min-height: 100vh;
+  padding: 12.8rem 6.4rem;
+  margin: 0 auto;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  &__country,
+  &__region {
+    position: relative;
+    box-shadow: 0px 2px 8px var(--primary-color-shadow);
+    border-radius: 0.4rem;
+  }
+}
+.input {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
+  padding: 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  &::placeholder {
+    font-size: inherit;
+    color: var(--primary-color-text);
+  }
+  &--country {
+    padding-left: 4.8rem;
+    width: 35rem;
+  }
+  &--region {
+    padding-left: 2.4rem;
+  }
+}
+input:focus {
+  outline: none;
+}
+
+.icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: var(--primary-color-text);
+  z-index: 22;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  &--search {
+    left: 2.4rem;
+  }
+  &--down {
+    right: 1.2rem;
+  }
+  &--down:hover {
+    cursor: pointer;
+  }
+}
+
+.list {
+  position: absolute;
+  list-style: none;
+  background-color: var(--primary-color);
+  padding: 1.8rem 2.4rem;
+  border-radius: 0.4rem;
+  margin-top: 0.2rem;
+  width: 100%;
+  &__items {
+    font-family: inherit;
+    padding-bottom: 0.6rem;
+    z-index: 222;
+  }
+  &__items:hover {
+    cursor: pointer;
+  }
+  top: -100%;
+  opacity: 0;
+  display: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.list.active {
+  top: 100%;
+  opacity: 1;
+  display: block;
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] minmax(25rem, 1fr) [col-end]);
+  gap: 4.8rem;
+  margin: 6.4rem 0;
+}
+
+.country {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  box-shadow: 1px 2px 5px var(--primary-color-shadow);
+  transition: all 0.2s ease-in-out;
+
+  &__details {
+    padding: 2.4rem 0 3.4rem 2.4rem;
+  }
+  &--flag {
+    width: 100%;
+    height: 15rem;
+  }
+  &--name {
+    padding-bottom: 1rem;
+  }
+  &__btn--back {
+    display: none;
+    background-color: var(--primary-color);
+    padding: 0.8rem 0.4rem;
+    grid-column: 1/-1;
+    margin: 3.4rem 0;
+    border: none;
+    color: var(--primary-color-text);
+    position: relative;
+    width: 10rem;
+  }
+  &__btn--back:hover {
+    cursor: pointer;
+  }
+  &__more {
+    display: none;
+    padding: 2.4rem 0 3.4rem 2.4rem;
+  }
+  &__borders {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  &__border {
+    background-color: var(--primary-color);
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+    border-radius: 0.4rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.4rem;
+    &--items {
+      flex: 50%;
+    }
+    &--items span {
+      color: var(--primary-color-input);
+      margin-left: 0.4rem;
+    }
+  }
+}
+
+.country:hover {
+  cursor: pointer;
+}
+
+.country.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 99;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  grid-template-rows: min-content;
+  padding: 9.6rem 6.4rem;
+  column-gap: 5vw;
+  .country {
+    &--flag {
+      height: 28rem;
+    }
+    &__more,
+    &__btn--back {
+      display: block;
+    }
+    &__more {
+      height: max-content;
+    }
+    &__details {
+      display: none;
+    }
+  }
+}
+
+.btn__back:hover {
+  cursor: pointer;
+}
+.icon--back {
+  position: absolute;
+  margin: 0 1rem;
+  left: 0;
+}
