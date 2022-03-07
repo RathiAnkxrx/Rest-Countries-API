@@ -25,21 +25,19 @@ const controlSearchCountry = async function (query) {
   module.findCountry(query);
   if (!module.state.search) return;
   contryView.render(module.state.search);
-  detailsView.adddetailHandler();
-  detailsView.addbackHandler();
 };
 
 const controlSearchRegion = async function (data) {
   module.findRegion(data);
   // if (!module.state.region) return;
   regionView.render(module.state.searchRegion);
-  detailsView.adddetailHandler();
-  detailsView.addbackHandler();
 };
 
 const init = async function () {
   await module.renderCountry();
   regionView.render(module.state.country);
+  detailsView.adddetailHandler();
+  detailsView.addbackHandler();
   searchCountry.addinputHandler(controlSearchCountry);
   regionView.addSelectHandler(controlSearchRegion);
 };

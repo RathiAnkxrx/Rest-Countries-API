@@ -6,6 +6,7 @@ class detailView {
   _btn = document.querySelector(".country__btn--back");
 
   adddetailHandler() {
+    console.log("entered at first");
     this._displayElement.addEventListener("click", function (e) {
       const target = e.target.closest(".country");
       target.classList.add("active");
