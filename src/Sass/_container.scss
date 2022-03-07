@@ -237,6 +237,9 @@ input:focus {
       display: none;
     }
   }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .btn__back:hover {
