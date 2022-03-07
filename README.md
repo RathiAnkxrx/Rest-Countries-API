@@ -17,7 +17,3 @@ Your users can able to do these tasks:
 
 - [GitHub](https://github.com/RathiAnkxrx/Rest-Countries-API)
 - [Netlify](https://rest-countries-api-ar.netlify.app/)
-
-## Responsive
-
-    - currenty this site is only for desktop version ( working on mobile version too)
